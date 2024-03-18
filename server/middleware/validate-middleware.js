@@ -1,6 +1,7 @@
 const validate = (schema) => async (req, res, next) => {
     try {
-        const pareBody = await schema.parseAsync(req.body);
+        const pareBody = await schema.parseAsync(req.body); //function that attempts to validate the data in req.body 
+        
         req.body = pareBody;
         next();
     } catch (err) {

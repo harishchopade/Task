@@ -10,11 +10,11 @@ const formdata = reactive({
   email:'',
   password: '',
 })
-console.log(formdata);
+// console.log(formdata);
 
 const handleSubmit = async () =>{
   try {
-        console.log(formdata)
+        // console.log(formdata)
         const res = await axios.post("/api/register", formdata)
         if (res) {
             router.push('/')
@@ -28,8 +28,7 @@ const handleSubmit = async () =>{
 
 </script>
 <template>
-  <!-- <div class="bg-cover h-screen" style="background-image: url('path/to/your/image.jpg');"></div> -->
- 
+
   <div class="bg-gray-400 bg-cover h-screen">
   <form @submit.prevent="handleSubmit"
      class="flex flex-col justify-center items-center space-y-10 h-screen">
